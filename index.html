@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>BATAY AND JOMEN FINALS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-calculator"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>AGE CALCULATOR</h1>
+								<p>AN AGE CALCULATOR THAT CALCULATES YOUR AGE <BR> IN YEARS, MONTHS, DAYS, HOURS AND MINUTES. <BR> DESIGNED BY: <br> <a href="https://www.facebook.com/AGBGTHBBBBHTY">WILMARK BATAY</a><br />
+								 <a href="https://www.facebook.com/jomen.gulipatan.5">JOMEN GULIPATAN</a></p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Intro</a></li>
+								<li><a href="#work">Work</a></li>
+								<li><a href="#about">WILMARK</a></li>
+								<li><a href="#contact">JOMEN</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major">Intro</h2>
+								<span class="image main"><img src="images/icon.png" alt="" /></span>
+								<p>AGE CALCULATOR <br> Age calculator for a difference in your age, in your details month, day, year, hours, in minutes.</p>
+							</article>
+
+						<!-- Work -->
+							<article id="work">
+								<h2 class="major">Work</h2>
+								<span class="image main"><img src="images/work.png" alt="" /></span>
+								<p> <style>
+									/* Change the background color of the input date field to black */
+									input[type="date"] {
+										background-color: black;
+										color:white;
+									}
+								</style><form>
+        <label for="birthdate">Enter your birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate">
+        <input type="button" value="Calculate" onclick="calculateAge()">
+    </form>
+    <p id="output"></p>
+
+    <script>
+        function calculateAge() {
+            // Get the birthdate from the input field
+            var birthdate = new Date(document.querySelector("#birthdate").value);
+            // Get the current date
+            var currentDate = new Date();
+            // Calculate the difference between the current date and birthdate
+            var diff = currentDate - birthdate;
+            // Convert milliseconds to years
+            var ageInYears = diff / (1000 * 60 * 60 * 24 * 365.25);
+            // Round down to the nearest whole number
+            ageInYears = Math.floor(ageInYears);
+            // Convert milliseconds to months
+            var ageInMonths = diff / (1000 * 60 * 60 * 24 * 30.4);
+            // Round down to the nearest whole number
+            ageInMonths = Math.floor(ageInMonths);
+            // Convert milliseconds to days
+            var ageInDays = diff / (1000 * 60 * 60 * 24);
+            // Round down to the nearest whole number
+            ageInDays = Math.floor(ageInDays);
+            // Convert milliseconds to hours
+            var ageInHours = diff / (1000 * 60 * 60);
+            // Round down to the nearest whole number
+            ageInHours = Math.floor(ageInHours);
+            // Convert milliseconds to minutes
+            var ageInMinutes = diff / (1000 * 60);
+            // Round down to the nearest whole number
+            ageInMinutes = Math.floor(ageInMinutes);
+            // Display the age in years, months, days, hours, and minutes
+            document.querySelector("#output").innerHTML = "Your age is: <br>" + ageInYears + " years <br>" + ageInMonths + " months <br>" + ageInDays + " days <br>" + ageInHours + " hours <br>" + ageInMinutes + " minutes.";
+        }
+    </script></p>
+							</article>
+
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">WILMARK</h2>
+								<span class="image main"><img src="images/BAT.jpg" alt="" /></span>
+								<p> 
+									WILMARK BATAY
+									<br>1ST YEAR COLLEGE
+									<br>LEON, ILOILO
+									<br>09457369742 </p>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">JOMEN</h2>
+								<span class="image main"><img src="images/JOM.jpg" alt="" /></span>
+								<p>
+									JOMEN GULIPATAN
+									<br>1ST YEAR COLLEGE
+									<br>ILOILO CITY
+									<br>(CONTACT NUMBER)</p>
+							
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; JANUARY 2023.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
